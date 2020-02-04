@@ -6,8 +6,8 @@
 #	steadyStateAmplitude sonuç birimi metre
 #
 #	example
-#	>>> steadyStateAmplitude(5, 300, 120, 0.4, 0.02, 1, 1)
-#	0.0003332386120550954
+#	>>> steadyStateAmplitude(5, 500, 120, 0.4, 0.02, 100, 0.001)
+#	0.00020014410346608043
 
 import math
 
@@ -18,7 +18,7 @@ def natFreqInRadSec(k, m_wheel):	#in Rad/sec
 	return (natFreqInHz(k, m_wheel) * 2 * math.pi)
 
 def operatingFreqInRadSec(speed, wheelDiameter): # speed in kph	-	wheelDiameter in m
-	return (speed/(3.6*wheelDiameter* math.pi))
+	return (2 * math.pi * speed/(3.6*wheelDiameter* math.pi))
 
 def freqRatio(k, m_wheel, speed, wheelDiameter): # a.k.a. => 	r
 	return(operatingFreqInRadSec(speed, wheelDiameter)/natFreqInRadSec(k, m_wheel))
