@@ -1,8 +1,8 @@
 #	m_car ve m_wheel	birimi Kg
-#	speed 				birimi kph
+#	speed				birimi kph
 #	wheelDiameter 		birimi metre
 #	eccentricity 		birimi metre
-#	k ve zeta 			sabit
+#	k ve zeta			sabit
 import math
 
 def natFreqInHz(k, m_wheel): # in Hz
