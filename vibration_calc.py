@@ -18,7 +18,7 @@ def natFreqInRadSec(k, m_wheel):	#in Rad/sec
 	return (natFreqInHz(k, m_wheel) * 2 * math.pi)
 
 def operatingFreqInRadSec(speed, wheelDiameter): # speed in kph	-	wheelDiameter in m
-	return (speed/(3.6*wheelDiameter*2* math.pi))
+	return (speed/(3.6*wheelDiameter* math.pi))
 
 def freqRatio(k, m_wheel, speed, wheelDiameter): # a.k.a. => 	r
 	return(operatingFreqInRadSec(speed, wheelDiameter)/natFreqInRadSec(k, m_wheel))
