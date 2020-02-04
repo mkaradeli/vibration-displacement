@@ -3,6 +3,8 @@
 #	wheelDiameter 		birimi metre
 #	eccentricity 		birimi metre
 #	k ve zeta			sabit
+#	steadyStateAmplitude sonuç birimi metre
+
 import math
 
 def natFreqInHz(k, m_wheel): # in Hz
