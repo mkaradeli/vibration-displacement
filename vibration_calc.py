@@ -4,6 +4,10 @@
 #	eccentricity 		birimi metre
 #	k ve zeta			sabit
 #	steadyStateAmplitude sonuç birimi metre
+#
+#	example
+#	>>> steadyStateAmplitude(5, 300, 120, 0.4, 0.02, 1, 1)
+#	3.785623917291599e-07
 
 import math
 
@@ -14,13 +18,11 @@ def natFreqInRadSec(k, m_wheel):	#in Rad/sec
 	return (natFreqInHz(k, m_wheel) * 2 * math.pi)
 
 def operatingFreqInRadSec(speed, wheelDiameter): # speed in kph	-	wheelDiameter in m
-	return (speed/3.6/wheelDiameter*2* math.pi())
+	return (speed/(3.6*wheelDiameter*2* math.pi))
 
 def freqRatio(k, m_wheel, speed, wheelDiameter): # a.k.a. => 	r
 	return(natFreqInRadSec(k, m_wheel)/operatingFreqInRadSec(speed, wheelDiameter))
 
 def steadyStateAmplitude(m_wheel, m_car, speed, wheelDiameter, eccentricity, k, zeta):
 	r = freqRatio(k, m_wheel, speed, wheelDiameter)
-	return((m_wheel*eccentricity/m_car)*((r^2) / math.sqrt((1-r^2)^2 + (2*r*zeta)^2)))
-
-
+	return((m_wheel*eccentricity/m_car)*((r*r) / math.sqrt(math.pow(1-r*r, 2) + math.pow(2*r*zeta, 2))))
