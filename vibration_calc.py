@@ -21,7 +21,7 @@ def operatingFreqInRadSec(speed, wheelDiameter): # speed in kph	-	wheelDiameter 
 	return (speed/(3.6*wheelDiameter*2* math.pi))
 
 def freqRatio(k, m_wheel, speed, wheelDiameter): # a.k.a. => 	r
-	return(natFreqInRadSec(k, m_wheel)/operatingFreqInRadSec(speed, wheelDiameter))
+	return(operatingFreqInRadSec(speed, wheelDiameter)/natFreqInRadSec(k, m_wheel))
 
 def steadyStateAmplitude(m_wheel, m_car, speed, wheelDiameter, eccentricity, k, zeta):
 	r = freqRatio(k, m_wheel, speed, wheelDiameter)
