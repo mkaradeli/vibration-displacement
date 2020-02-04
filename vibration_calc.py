@@ -7,7 +7,7 @@
 #
 #	example
 #	>>> steadyStateAmplitude(5, 300, 120, 0.4, 0.02, 1, 1)
-#	3.785623917291599e-07
+#	0.0003332386120550954
 
 import math
 
